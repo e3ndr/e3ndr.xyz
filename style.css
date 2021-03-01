@@ -1,0 +1,52 @@
+html,
+body {
+    font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+    overflow: hidden;
+}
+
+#canvas {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* Hero */
+.hero.is-info {
+    background-color: #181818 !important;
+}
+
+.hero .subtitle {
+    padding: 3rem 0;
+    line-height: 1.5;
+}
+
+.hero-body {
+    z-index: 99;
+}
+
+/* Navbar */
+.hero .nav,
+.hero.is-success .nav {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.brand-text {
+    font-size: 2.5em;
+}
+
+.button .icon:first-child:not(:last-child) {
+    margin-right: 0.05em;
+    transform: translateY(.05em);
+}
+
+.casterlabs-icon img {
+    height: 1.4em;
+    margin-right: 0.3em;
+}
+
+.button:hover .casterlabs-icon {
+    filter: invert(1);
+}
