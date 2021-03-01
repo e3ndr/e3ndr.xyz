@@ -14,7 +14,7 @@ body {
 
 /* Hero */
 .hero.is-info {
-    background-color: #181818 !important;
+    background-color: #0f0f0f !important;
 }
 
 .hero .subtitle {
@@ -24,6 +24,14 @@ body {
 
 .hero-body {
     z-index: 99;
+    position: absolute;
+    width: 100vw;
+    top: 50vh;
+    transform: translateY(-50%);
+}
+
+.hero.is-info .navbar-menu {
+    background-color: #0f0f0f !important;
 }
 
 /* Navbar */
