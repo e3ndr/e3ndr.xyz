@@ -1,7 +1,5 @@
 // Bable transpiled version.
 
-"use strict";
-
 // Adapted from: https://codepen.io/Alca/pen/JjKjXxK
 canvasOptions = {
     autoCompensate: false,

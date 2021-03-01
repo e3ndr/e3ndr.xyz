@@ -1,8 +1,5 @@
-// Bable transpiled version.
-
-"use strict";
-
 // https://codepen.io/Alca/pen/XeZBab
+
 const {
     E,
     LN10,
