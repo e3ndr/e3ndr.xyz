@@ -31,7 +31,8 @@ body {
 }
 
 .hero.is-info .navbar-menu {
-    background-color: #0f0f0f !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
 }
 
 /* Navbar */
