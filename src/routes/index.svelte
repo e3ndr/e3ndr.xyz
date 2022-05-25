@@ -44,13 +44,13 @@
 
     <br />
 
-    <p>As you can probably tell, I'm well versed in Java (11 is preferred, but 8 just feels like home). When it comes to web development, I prefer the Svelte + custom Java API approach.</p>
-    <p>I'm pretty handy with HTML + CSS, and wouldn't mind the occasional work, but I prefer the backend more than anything.</p>
+    <p>I'm well versed in Java (11 is preferred, but 8 just feels like home). When it comes to web development, I prefer the Svelte + custom Java API approach.</p>
+    <p>I'm profecient with HTML + CSS, and wouldn't mind the occasional work, but I prefer the backend more than anything.</p>
 
     <br />
 
     <p>
-        So, if you're interested in getting in touch, you can do so by emailing me at <a href="mailto:balexbowles@gmail.com">balexbowles@gmail.com</a>. If you're too hip for email you can always reach me on my <a href="https://twitter.com/ItzLcyx">Twitter</a>, or even pester me on Discord
+        If you're interested in getting in touch, you can do so by emailing me at <a href="mailto:balexbowles@gmail.com">balexbowles@gmail.com</a>. If you're too hip for email you can always reach me on my <a href="https://twitter.com/ItzLcyx">Twitter</a>, or even pester me on Discord
         <span>
             (
             <pre>Ɇ₦ĐɆⱤV₳₥₱łⱤɆ#9092</pre>
@@ -79,9 +79,7 @@
     <div id="my-links">
         <a href="https://twitter.com/ItzLcyx">Twitter</a> &bull;
         <a href="https://github.com/e3ndr">Github</a> &bull;
-        <a href="https://instagram.com/ItzLcyx">Instagram</a> &bull;
-        <a href="https://www.dropbox.com/s/kyeh78oldxsfl48/ahegao.zip?dl=0">"Profile Pictures"</a> &bull;
-        <a href="https://www.youtube.com/embed/6n3pFFPSlW4?autoplay=1">Onlyfans</a>
+        <a href="https://instagram.com/ItzLcyx">Instagram</a>
     </div>
 </section>
 
