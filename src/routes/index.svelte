@@ -1,7 +1,19 @@
 <script>
-    import TextSnippet from "../components/TextSnippet.svelte";
+    import { onMount } from "svelte";
 
-    let emojiProvider = "noto-emoji";
+    import TextSnippet from "../components/TextSnippet.svelte";
+    import getDeviceMeta from "../components/device-meta.mjs";
+
+    let emojiProvider = "system";
+
+    onMount(() => {
+        const deviceMeta = getDeviceMeta();
+
+        if (deviceMeta.platform == "Windows") {
+            // Windows emojis are terrible, I refuse to subject anyone to them.
+            emojiProvider = "noto-emoji";
+        }
+    });
 </script>
 
 <section id="introduction">
@@ -47,11 +59,11 @@
     </p>
 
     <br />
-    <br />
 
     <span>
         This funny dropdown is silly and <span style="text-decoration: underline;">should</span> be messed with :^) &nbsp;
         <select bind:value={emojiProvider}>
+            <option value="system">System</option>
             <option value="twemoji">Twemoji</option>
             <option value="noto-emoji">Noto Emoji</option>
             <option value="openmoji">Openmoji</option>
@@ -61,13 +73,16 @@
 
     <br />
     <br />
+    <br />
+    <br />
 
-    <span>
+    <div id="my-links">
         <a href="https://twitter.com/ItzLcyx">Twitter</a> &bull;
         <a href="https://github.com/e3ndr">Github</a> &bull;
         <a href="https://instagram.com/ItzLcyx">Instagram</a> &bull;
-        <a href="/ahegao.zip">"Profile Pictures"</a>
-    </span>
+        <a href="https://www.dropbox.com/s/kyeh78oldxsfl48/ahegao.zip?dl=0">"Profile Pictures"</a> &bull;
+        <a href="https://www.youtube.com/embed/6n3pFFPSlW4?autoplay=1">Onlyfans</a>
+    </div>
 </section>
 
 <style>
@@ -94,5 +109,13 @@
     #aboutme {
         font-family: "Raleway", sans-serif;
         font-size: larger;
+        margin-left: 24px;
+        margin-right: 24px;
+        margin-bottom: 48px;
+    }
+
+    #my-links {
+        font-size: 16px;
+        text-align: center;
     }
 </style>
