@@ -1,0 +1,63 @@
+/* Patches */
+
+body {
+    margin: auto;
+    max-width: 1000px;
+}
+
+
+/* Helpers */
+
+.color-band {
+    width: 100vw;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.desktop-only {
+    display: revert;
+}
+
+@media screen and (max-width: 800px) {
+    .mobile-only {
+        display: revert !important;
+    }
+    .desktop-only {
+        display: none !important;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .dark-show {
+        display: unset !important;
+    }
+    .light-show {
+        display: none !important;
+    }
+    .color-band {
+        background-color: #121212 !important;
+    }
+     :root {
+        --white-invert-factor: 0.2;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .dark-show {
+        display: none !important;
+    }
+    .light-show {
+        display: unset !important;
+    }
+    .color-band {
+        background-color: #ededed !important;
+    }
+    .footer {
+        background-color: #ededed;
+    }
+     :root {
+        --white-invert-factor: 0.8;
+    }
+}
