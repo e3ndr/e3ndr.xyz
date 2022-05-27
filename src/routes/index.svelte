@@ -25,7 +25,7 @@
 <br />
 
 <section id="aboutme">
-    <p>I'm am 18 year old backend-focused full-stack developer with a passion for building the future of web and desktop applications.</p>
+    <p>I'm an 18 year old backend-focused full-stack developer with a passion for building the future of web and desktop applications.</p>
     <p>My current passion project is <a href="https://casterlabs.co" target="_blank">Casterlabs</a>, a StreamElements/Streamlabs like service. For that, I've built:</p>
     <ul>
         <li>
