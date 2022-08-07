@@ -1,119 +1,130 @@
 <script>
-    import { onMount } from "svelte";
+	import { onMount } from 'svelte';
 
-    import TextSnippet from "../components/TextSnippet.svelte";
-    import getDeviceMeta from "../components/device-meta.mjs";
+	import TextSnippet from '../components/TextSnippet.svelte';
+	import getDeviceMeta from '../components/device-meta.mjs';
 
-    let emojiProvider = "system";
-
-    onMount(() => {
-        const deviceMeta = getDeviceMeta();
-
-        if (deviceMeta.platform == "Windows") {
-            // Windows emojis are terrible, I refuse to subject anyone to them.
-            emojiProvider = "noto-emoji";
-        }
-    });
+	let emojiProvider = 'noto-emoji';
 </script>
 
 <section id="introduction">
-    <h1 class="title">
-        <TextSnippet {emojiProvider}>Howdy, I'm Alex 🤠</TextSnippet>
-    </h1>
+	<h1 class="title">
+		<TextSnippet {emojiProvider}>Howdy, I'm Alex 🤠</TextSnippet>
+	</h1>
 </section>
 
 <br />
 
 <section id="aboutme">
-    <p>I'm an 18 year old backend-focused full-stack developer with a passion for building the future of web and desktop applications.</p>
-    <p>My current passion project is <a href="https://casterlabs.co" target="_blank">Casterlabs</a>, a StreamElements/Streamlabs like service. For that, I've built:</p>
-    <ul>
-        <li>
-            <a href="https://github.com/Casterlabs/Sora" target="_blank">Sora</a>, a Java API framework for making super clean APIs.
-        </li>
-        <li>
-            <a href="https://github.com/Casterlabs/Rakurai/tree/main/Json" target="_blank">Rson</a>, a Json library for Java, because Gson and Jackson were pissing me off.
-        </li>
-        <li>
-            <a href="https://emoji.casterlabs.co" target="_blank">Emoji for everyone</a>, a handy-dandy helper (like Twemoji) that allows you to use different Emoji providers easily.
-        </li>
-        <li>
-            <a href="https://github.com/Casterlabs/Kaimen" target="_blank">Kaimen</a>, a Java library for building desktop apps that use Webviews for their UI. Similar to Electron.
-        </li>
-    </ul>
+	<p>
+		I'm an 18 year old backend-focused full-stack developer with a passion for building the future
+		of web and desktop applications.
+	</p>
+	<p>
+		My current passion project is <a href="https://casterlabs.co" target="_blank">Casterlabs</a>, a
+		StreamElements/Streamlabs like service. For that, I've built:
+	</p>
+	<ul>
+		<li>
+			<a href="https://github.com/Casterlabs/Sora" target="_blank">Sora</a>, a Java API framework
+			for making super clean APIs.
+		</li>
+		<li>
+			<a href="https://github.com/Casterlabs/Rakurai/tree/main/Json" target="_blank">Rson</a>, a
+			Json library for Java, because Gson and Jackson were pissing me off.
+		</li>
+		<li>
+			<a href="https://emoji.casterlabs.co" target="_blank">Emoji for everyone</a>, a handy-dandy
+			helper (like Twemoji) that allows you to use different Emoji providers easily.
+		</li>
+		<li>
+			<a href="https://github.com/Casterlabs/Kaimen" target="_blank">Kaimen</a>, a Java library for
+			building desktop apps that use Webviews for their UI. Similar to Electron.
+		</li>
+	</ul>
 
-    <br />
+	<br />
 
-    <p>I'm well versed in Java (11 is preferred, but 8 just feels like home). When it comes to web development, I prefer the Svelte + custom Java API approach.</p>
-    <p>I'm profecient with HTML + CSS, and wouldn't mind the occasional work, but I prefer the backend more than anything.</p>
+	<p>
+		I'm well versed in Java (11 is preferred, but 8 just feels like home). When it comes to web
+		development, I prefer the Svelte + custom Java API approach.
+	</p>
+	<p>
+		I'm profecient with HTML + CSS, and wouldn't mind the occasional work, but I prefer the backend
+		more than anything.
+	</p>
 
-    <br />
+	<br />
 
-    <p>
-        If you're interested in getting in touch, you can do so by emailing me at <a href="mailto:balexbowles@gmail.com">balexbowles@gmail.com</a>. If you're too hip for email you can always reach me on my <a href="https://twitter.com/ItzLcyx">Twitter</a>, or even pester me on Discord
-        <span>
-            (
-            <pre>Ɇ₦ĐɆⱤV₳₥₱łⱤɆ#9092</pre>
-            ).
-        </span>
-    </p>
+	<p>
+		If you're interested in getting in touch, you can do so by emailing me at <a
+			href="mailto:balexbowles@gmail.com">balexbowles@gmail.com</a
+		>. If you're too hip for email you can always reach me on my
+		<a href="https://twitter.com/ItzLcyx">Twitter</a>, or even pester me on Discord
+		<span>
+			(
+			<pre>Ɇ₦ĐɆⱤV₳₥₱łⱤɆ#9092</pre>
+			).
+		</span>
+	</p>
 
-    <br />
+	<br />
 
-    <span>
-        This funny dropdown is silly and <span style="text-decoration: underline;">should</span> be messed with :^) &nbsp;
-        <select bind:value={emojiProvider}>
-            <option value="system">System</option>
-            <option value="twemoji">Twemoji</option>
-            <option value="noto-emoji">Noto Emoji</option>
-            <option value="openmoji">Openmoji</option>
-            <!-- <option value="sensa-emoji">Sensa Emoji</option> -->
-        </select>
-    </span>
+	<span>
+		This funny dropdown is silly and <span style="text-decoration: underline;">should</span> be
+		messed with :^) &nbsp;
+		<select bind:value={emojiProvider}>
+			<option value="system">System</option>
+			<option value="twemoji">Twemoji</option>
+			<option value="noto-emoji">Noto Emoji</option>
+			<option value="openmoji">Openmoji</option>
+			<!-- <option value="sensa-emoji">Sensa Emoji</option> -->
+		</select>
+	</span>
 
-    <br />
-    <br />
-    <br />
-    <br />
+	<br />
+	<br />
+	<br />
+	<br />
 
-    <div id="my-links">
-        <a href="https://twitter.com/ItzLcyx">Twitter</a> &bull;
-        <a href="https://github.com/e3ndr">Github</a> &bull;
-        <a href="https://instagram.com/ItzLcyx">Instagram</a>
-    </div>
+	<div id="my-links">
+		<a href="https://twitter.com/ItzLcyx">Twitter</a> &bull;
+		<a href="https://github.com/e3ndr">Github</a> &bull;
+		<a href="https://instagram.com/ItzLcyx">Instagram</a>
+	</div>
 </section>
 
 <style>
-    pre {
-        display: inline-block;
-        user-select: all;
-    }
+	pre {
+		display: inline-block;
+		user-select: all;
+	}
 
-    #introduction {
-        text-align: center;
-        margin: 36px;
-    }
+	#introduction {
+		text-align: center;
+		margin: 36px;
+	}
 
-    #introduction .title {
-        margin: 0;
-        font-family: "Smooch", cursive;
-        font-size: 72px;
-    }
+	#introduction .title {
+		margin: 0;
+		font-family: 'Smooch', cursive;
+		font-size: 72px;
+	}
 
-    #introduction .title :global([data-type="emoji"]) {
-        vertical-align: sub !important;
-    }
+	#introduction .title :global([data-type='emoji']) {
+		vertical-align: sub !important;
+	}
 
-    #aboutme {
-        font-family: "Raleway", sans-serif;
-        font-size: larger;
-        margin-left: 24px;
-        margin-right: 24px;
-        margin-bottom: 48px;
-    }
+	#aboutme {
+		font-family: 'Raleway', sans-serif;
+		font-size: larger;
+		margin-left: 24px;
+		margin-right: 24px;
+		margin-bottom: 48px;
+	}
 
-    #my-links {
-        font-size: 16px;
-        text-align: center;
-    }
+	#my-links {
+		font-size: 16px;
+		text-align: center;
+	}
 </style>
