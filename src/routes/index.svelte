@@ -1,8 +1,5 @@
 <script>
-	import { onMount } from 'svelte';
-
 	import TextSnippet from '../components/TextSnippet.svelte';
-	import getDeviceMeta from '../components/device-meta.mjs';
 
 	let emojiProvider = 'noto-emoji';
 </script>
