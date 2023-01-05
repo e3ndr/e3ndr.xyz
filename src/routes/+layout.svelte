@@ -1,20 +1,12 @@
 <script>
 	import CSSIntermediate from '$lib/CSSIntermediate.svelte';
-	import Navbar from '$lib/layout/Navbar.svelte';
 	import Footer from '$lib/layout/Footer.svelte';
 </script>
 
 <CSSIntermediate>
-	<div class="flex flex-col min-h-full">
-		<!-- Here so the layout will work properly. -->
-		<Navbar />
+	<main class="mx-auto container bg-base-1 p-12 shadow min-h-full">
+		<slot />
+	</main>
 
-		<!-- This'll grow to fill any remaining space. It'll also overflow the container if needed. -->
-		<main class="flex-grow">
-			<slot />
-		</main>
-	</div>
-
-	<!-- Here so the footer will get pushed off screen. -->
 	<Footer />
 </CSSIntermediate>
