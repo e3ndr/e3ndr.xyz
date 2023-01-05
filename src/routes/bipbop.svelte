@@ -57,10 +57,10 @@
 
 			let frequency = 0;
 			if (isBip) {
-				document.title = `Bip! - BRIME - ${FRAMERATE}fps`;
+				document.title = `Bip! - ${FRAMERATE}fps`;
 				frequency = 800;
 			} else {
-				document.title = `Bop! - BRIME - ${FRAMERATE}fps`;
+				document.title = `Bop! - ${FRAMERATE}fps`;
 				frequency = 600;
 			}
 
@@ -93,7 +93,7 @@
 </script>
 
 <div>
-	<div id="time-elapsed" class="text-white text-9xl text-right">
+	<div id="time-elapsed">
 		<span>
 			{elapsedSeconds};{elapsedSubSeconds
 				.toString()
@@ -147,7 +147,7 @@
 		class:is-bipping={isBip}
 		style="--progress: {((currentFrame % FRAMERATE) / FRAMERATE) * 100}%;"
 	>
-		<span class="bip text-center text-5xl">
+		<span id="bip">
 			{#if isBip}
 				Bip!
 			{:else}
@@ -175,6 +175,9 @@
 		transform: translateY(-50%);
 		width: 30vw;
 		overflow: hidden;
+		color: white;
+		text-align: center;
+		font-size: 8rem;
 	}
 
 	#color-test {
@@ -255,11 +258,13 @@
 		--secondary-color: var(--bip-color);
 	}
 
-	.bip {
+	#bip {
 		position: absolute;
 		display: block;
 		top: 50%;
 		left: 0;
 		right: 0;
+		text-align: center;
+		font-size: 6rem;
 	}
 </style>
