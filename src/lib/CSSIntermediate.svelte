@@ -2,8 +2,8 @@
 	import ScrollToTop from '$lib/layout/ScrollToTop.svelte';
 
 	// Theme colors.
-	import './css/colors/base/sage.css';
-	import './css/colors/primary/grass.css';
+	import './css/colors/base/mauve.css';
+	import './css/colors/primary/pink.css';
 	import './css/colors/overlay-black.css';
 	import './css/colors/overlay-white.css';
 
@@ -17,8 +17,8 @@
 	import { onMount } from 'svelte';
 
 	const useLightTheme = true;
-	const baseColor = 'sage';
-	const primaryColor = 'green';
+	const baseColor = 'mauve';
+	const primaryColor = 'pink';
 
 	let scrollButton;
 
