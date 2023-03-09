@@ -30,7 +30,7 @@
 
 <div class="mx-auto max-w-3xl relative">
 	<a
-		class="absolute -translate-x-16 text-xl mb-8 w-10 h-10 rounded-full transition bg-base-3 border border-base-4 hover:bg-base-4 hover:border-base-5"
+		class="absolute -translate-x-11 md:-translate-x-12 lg:-translate-x-16 text-xl mb-8 w-10 h-10 rounded-full transition bg-base-3 border border-base-4 hover:bg-base-4 hover:border-base-5"
 		href="/articles"
 	>
 		<icon

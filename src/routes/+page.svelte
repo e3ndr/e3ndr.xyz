@@ -30,7 +30,12 @@
 		founders of Casterlabs, a toolsuite for live-streamers and content creators.
 	</p>
 
-	<ul class="mt-6 w-fit space-x-5 flex flex-row justify-center items-center">
+	<div
+		class="-ml-0.5 text-base-10 hover:text-base-11 transition w-5 h-5"
+		data-dummy="Dummy element so Tailwind knows what css classes to bundle."
+		aria-hidden="true"
+	/>
+	<ul class="mt-6 mx-auto sm:mx-0 w-fit space-x-5 flex flex-row justify-center items-center">
 		{#each SOCIALS as social}
 			<li>
 				<a href={social.href} rel="noreferrer" target="_blank" title={social.name}>
@@ -39,12 +44,6 @@
 				</a>
 			</li>
 		{/each}
-
-		<li
-			class="-ml-0.5 text-base-10 hover:text-base-11 transition w-5 h-5"
-			data-dummy="Dummy element so Tailwind knows what css classes to bundle."
-			aria-hidden="true"
-		/>
 	</ul>
 
 	<div class="mt-20 flex flex-col-reverse md:flex-row md:space-x-8 w-full">
@@ -117,7 +116,7 @@
 				target="_blank"
 				class="mt-12 block text-center w-full border bg-base-2 hover:bg-base-4 border-base-6 hover:border-base-7 transition rounded-md p-3"
 			>
-				<span class="text-md font-medium"> Contact me for a CV </span>
+				<span class="text-sm font-medium"> Contact me for a CV </span>
 				<icon
 					class="inline-block w-4 h-4 ml-1 -rotate-45 translate-y-px"
 					data-icon="icon/paper-airplane"

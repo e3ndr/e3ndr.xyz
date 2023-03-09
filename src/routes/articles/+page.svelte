@@ -18,23 +18,26 @@
 	<meta name="twitter:description" content="All of my previously-written articles." />
 </svelte:head>
 
-<a class="block text-xl mb-8" href="/">
+<a
+	class="absolute -translate-x-3 top-6 text-xl mb-8 w-10 h-10 rounded-full transition bg-base-3 border border-base-4 hover:bg-base-4 hover:border-base-5"
+	href="/"
+>
 	<icon
-		class="inline-block h-4 w-4 translate-y-0.5"
+		class="inline-block h-6 translate-y-2 translate-x-1.5"
 		data-icon="icon/chevron-left"
 		aria-hidden="true"
 	/>
-	Go back
+	<span class="sr-only"> Go back </span>
 </a>
 
-<ul>
+<ul class="mt-6">
 	{#each data.blogPosts as blogPost}
 		<li class="flex flex-row">
-			<p class="mt-4 w-36 text-base-11 text-sm text-right mr-2">
+			<p class="mt-4 hidden md:block md:w-36 text-base-11 text-sm text-right mr-2">
 				{blogPost.date}
 			</p>
 			<a
-				class="mr-36 px-6 py-4 flex-1 rounded-lg transition border border-transparent hover:bg-base-3 hover:border-base-4"
+				class="md:mr-36 px-6 py-4 flex-1 rounded-lg transition border border-transparent hover:bg-base-3 hover:border-base-4"
 				href="/articles/{blogPost.slug}"
 			>
 				<h1 class="text-md font-medium inline-block">{blogPost.title}</h1>
@@ -55,7 +58,7 @@
 
 	{#if !data.isStart}
 		<a
-			class="mx-36 block text-center text-sm p-3 rounded-lg transition border border-transparent hover:bg-base-3 hover:border-base-4"
+			class="md:mx-36 block text-center text-sm p-3 rounded-lg transition border border-transparent hover:bg-base-3 hover:border-base-4"
 			href="/articles?after={data.previous}"
 			on:click={() =>
 				document.querySelector('#css-intermediate').scrollTo({ top: 0, behavior: 'smooth' })}
