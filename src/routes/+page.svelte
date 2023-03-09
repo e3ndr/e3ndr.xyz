@@ -8,23 +8,23 @@
 
 <svelte:head>
 	<!-- HTML Meta Tags -->
-	<title>Software Engineer & UX Guru - e3ndr.xyz</title>
+	<title>Software Engineer & UX Expert - e3ndr.xyz</title>
 	<meta name="description" content="Hi, I'm Alex!" />
 
 	<!-- Facebook Meta Tags -->
-	<meta property="og:title" content="Software Engineer & UX Guru - e3ndr.xyz" />
+	<meta property="og:title" content="Software Engineer & UX Expert - e3ndr.xyz" />
 	<meta property="og:description" content="Hi, I'm Alex!" />
 
 	<!-- Twitter Meta Tags -->
 	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:title" content="Software Engineer & UX Guru - e3ndr.xyz" />
+	<meta name="twitter:title" content="Software Engineer & UX Expert - e3ndr.xyz" />
 	<meta name="twitter:description" content="Hi, I'm Alex!" />
 </svelte:head>
 
 <div class="mt-4">
 	<img class="rounded-full w-16 h-16" src="/images/avatar.jpg" alt="" />
 
-	<h1 class="mt-4 font-serif font-bold text-6xl">Software engineer & UX guru.</h1>
+	<h1 class="mt-4 font-serif font-bold text-6xl">Software engineer & UX Expert.</h1>
 	<p class="mt-3 text-lg max-w-2xl">
 		I'm Alex, a 19 y/o software engineer currently residing in Oklahoma. I'm also one of the
 		founders of Casterlabs, a toolsuite for live-streamers and content creators.
