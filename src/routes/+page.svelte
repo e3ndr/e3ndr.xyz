@@ -35,7 +35,7 @@
 		data-dummy="Dummy element so Tailwind knows what css classes to bundle."
 		aria-hidden="true"
 	/>
-	<ul class="mt-6 mx-auto sm:mx-0 w-fit space-x-5 flex flex-row justify-center items-center">
+	<ul class="mt-2 mx-auto sm:mx-0 w-fit space-x-5 flex flex-row justify-center items-center">
 		{#each SOCIALS as social}
 			<li>
 				<a href={social.href} rel="noreferrer" target="_blank" title={social.name}>
