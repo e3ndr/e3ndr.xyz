@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html class="h-full" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Manifest -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+		<link rel="icon" type="image/svg+xml" sizes="any" href="/favicon/favicon.svg" />
+		<link rel="manifest" href="/site.webmanifest" />
 
-    <link rel="shortcut icon" href="/favicon.ico" />
+		<!-- This remains on / so that old/dumb browsers can still show an icon. -->
+		<link rel="icon" sizes="48x48" href="/favicon.ico" />
 
-    <!-- Preconn -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<!-- Meta -->
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="/global.css" />
+		<title>e3ndr.xyz</title>
+		<meta property="og:site_name" content="e3ndr.xyz" />
+		<meta property="og:type" content="website" />
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Smooch&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet" />
+		<!-- Svelte -->
 
-    <!-- Svelte -->
+		%sveltekit.head%
+	</head>
 
-    %sveltekit.head%
-</head>
-
-<body>
-    %sveltekit.body%
-</body>
-
+	<body class="h-full" data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
 </html>
