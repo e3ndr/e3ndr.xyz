@@ -3,12 +3,12 @@
 	import Footer from '$lib/layout/Footer.svelte';
 
 	import { onMount } from 'svelte';
-	import { browser } from '$app/environment';
+	import { browser, dev } from '$app/environment';
 	import { page } from '$app/stores';
 	import * as Swetrix from 'swetrix';
 
 	onMount(() => {
-		Swetrix.init('nfebI15q8Nfk');
+		Swetrix.init('nfebI15q8Nfk', { debug: dev, disabled: dev });
 		Swetrix.trackViews();
 	});
 
