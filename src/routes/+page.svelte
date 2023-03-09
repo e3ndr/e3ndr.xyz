@@ -1,11 +1,16 @@
 <script>
 	import WORK_EXPERIENCE from '$lib/meta/workExperience.mjs';
 	import SOCIALS from '$lib/meta/socials.mjs';
+
+	/** @type {import('./$types').PageData} */
+	export let data;
 </script>
 
-<div class="mt-4" />
+<svelte:head>
+	<title>Software Engineer & UX Guru - e3ndr.xyz</title>
+</svelte:head>
 
-<div>
+<div class="mt-4">
 	<img class="rounded-full w-16" src="/images/avatar.jpg" alt="" />
 
 	<h1 class="mt-4 font-serif font-bold text-6xl">Software engineer & UX guru.</h1>
@@ -31,8 +36,37 @@
 		/>
 	</ul>
 
-	<div class="mt-20 flex flex-col-reverse md:flex-row w-full">
-		<div class="flex-1 mx-auto">Blog posts here...</div>
+	<div class="mt-20 flex flex-col-reverse md:flex-row md:space-x-8 w-full">
+		<ul class="flex-1 mx-auto">
+			{#each data.recentBlogPosts as blogPost}
+				<li
+					class="px-6 py-4 rounded-lg transition border border-transparent hover:bg-base-3 hover:border-base-4"
+				>
+					<a href="/articles/{blogPost.slug}">
+						<h1 class="text-md font-medium inline-block">{blogPost.title}</h1>
+						<span class="text-base-11 text-sm">
+							<div class="mx-1 inline-block h-[1em] w-0.5 rounded-full translate-y-0.5 bg-base-8" />
+							{blogPost.date}
+						</span>
+						<p class="mt-1 mb-2 text-base-12 text-sm">
+							{@html blogPost.snippet}
+						</p>
+						<span class="text-primary-10">
+							Read Article
+							<icon
+								class="inline-block h-3 -translate-x-1.5 translate-y-px"
+								data-icon="icon/chevron-right"
+							/>
+						</span>
+					</a>
+				</li>
+			{/each}
+
+			<a
+				class="block text-center text-sm p-3 rounded-lg transition border border-transparent hover:bg-base-3 hover:border-base-4"
+				href="/articles">See all articles</a
+			>
+		</ul>
 
 		<div class="flex-1 mx-auto border border-base-5 rounded-lg w-full max-w-md p-8 bg-base-2 mb-16">
 			<div class="flex flex-row items-center space-x-2 mb-6 ml-2">
@@ -69,7 +103,7 @@
 			>
 				<span class="text-md font-medium"> Contact me for a CV </span>
 				<icon
-					class="inline-block w-4 h-4 ml-1 -rotate-45 translate-y-[0.5px]"
+					class="inline-block w-4 h-4 ml-1 -rotate-45 translate-y-px"
 					data-icon="icon/paper-airplane"
 				/>
 			</a>
