@@ -4,7 +4,18 @@
 </script>
 
 <svelte:head>
+	<!-- HTML Meta Tags -->
 	<title>Articles - e3ndr.xyz</title>
+	<meta name="description" content="All of my previously-written articles." />
+
+	<!-- Facebook Meta Tags -->
+	<meta property="og:title" content="Articles - e3ndr.xyz" />
+	<meta property="og:description" content="All of my previously-written articles." />
+
+	<!-- Twitter Meta Tags -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Articles - e3ndr.xyz" />
+	<meta name="twitter:description" content="All of my previously-written articles." />
 </svelte:head>
 
 <a class="block text-xl mb-8" href="/">

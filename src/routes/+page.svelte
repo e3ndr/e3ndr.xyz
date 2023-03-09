@@ -7,7 +7,18 @@
 </script>
 
 <svelte:head>
+	<!-- HTML Meta Tags -->
 	<title>Software Engineer & UX Guru - e3ndr.xyz</title>
+	<meta name="description" content="Hi, I'm Alex!" />
+
+	<!-- Facebook Meta Tags -->
+	<meta property="og:title" content="Software Engineer & UX Guru - e3ndr.xyz" />
+	<meta property="og:description" content="Hi, I'm Alex!" />
+
+	<!-- Twitter Meta Tags -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Software Engineer & UX Guru - e3ndr.xyz" />
+	<meta name="twitter:description" content="Hi, I'm Alex!" />
 </svelte:head>
 
 <div class="mt-4">

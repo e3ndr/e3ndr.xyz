@@ -11,7 +11,21 @@
 </script>
 
 <svelte:head>
+	<!-- HTML Meta Tags -->
 	<title>{data.title} - e3ndr.xyz</title>
+	<meta name="description" content={data.snippet} />
+
+	<!-- Facebook Meta Tags -->
+	<meta property="og:title" content="{data.title} - e3ndr.xyz" />
+	<meta property="og:description" content={data.snippet} />
+	<!-- <meta property="og:image" content="/images/hero-bg.jpg" /> -->
+
+	<!-- Twitter Meta Tags -->
+	<meta name="twitter:card" content="summary" />
+	<!-- <meta name="twitter:card" content="summary_large_image" /> -->
+	<meta name="twitter:title" content="{data.title} - e3ndr.xyz" />
+	<meta name="twitter:description" content={data.snippet} />
+	<!-- <meta name="twitter:image" content="/images/hero-bg.jpg" /> -->
 </svelte:head>
 
 <div class="mx-auto max-w-3xl relative">
