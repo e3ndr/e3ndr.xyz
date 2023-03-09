@@ -22,7 +22,7 @@
 </svelte:head>
 
 <div class="mt-4">
-	<img class="rounded-full w-16" src="/images/avatar.jpg" alt="" />
+	<img class="rounded-full w-16 h-16" src="/images/avatar.jpg" alt="" />
 
 	<h1 class="mt-4 font-serif font-bold text-6xl">Software engineer & UX guru.</h1>
 	<p class="mt-3 text-lg max-w-2xl">
@@ -40,10 +40,10 @@
 			</li>
 		{/each}
 
-		<div
+		<li
 			class="-ml-0.5 text-base-10 hover:text-base-11 transition w-5 h-5"
-			aria-hidden="true"
 			data-dummy="Dummy element so Tailwind knows what css classes to bundle."
+			aria-hidden="true"
 		/>
 	</ul>
 
@@ -74,12 +74,14 @@
 				</li>
 			{/each}
 
-			<a
-				class="block text-center text-sm p-3 rounded-lg transition border border-transparent hover:bg-base-3 hover:border-base-4"
-				href="/articles"
-			>
-				See all articles
-			</a>
+			<li>
+				<a
+					class="block text-center text-sm p-3 rounded-lg transition border border-transparent hover:bg-base-3 hover:border-base-4"
+					href="/articles"
+				>
+					See all articles
+				</a>
+			</li>
 		</ul>
 
 		<div class="flex-1 mx-auto border border-base-5 rounded-lg w-full max-w-md p-8 bg-base-2 mb-16">
