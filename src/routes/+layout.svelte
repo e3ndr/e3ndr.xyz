@@ -4,7 +4,7 @@
 </script>
 
 <CSSIntermediate>
-	<main class="mx-auto container bg-base-1 p-12 shadow min-h-full">
+	<main class="mx-auto max-w-6xl bg-base-1 p-12 shadow min-h-full">
 		<slot />
 	</main>
 
