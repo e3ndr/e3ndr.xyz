@@ -19,7 +19,11 @@
 		class="absolute -translate-x-16 text-xl mb-8 w-10 h-10 rounded-full transition bg-base-3 border border-base-4 hover:bg-base-4 hover:border-base-5"
 		href="/articles"
 	>
-		<icon class="inline-block h-6 translate-y-2 translate-x-1.5" data-icon="icon/chevron-left" />
+		<icon
+			class="inline-block h-6 translate-y-2 translate-x-1.5"
+			data-icon="icon/chevron-left"
+			aria-hidden="true"
+		/>
 		<span class="sr-only"> Go back </span>
 	</a>
 

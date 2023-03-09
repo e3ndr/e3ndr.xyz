@@ -56,6 +56,7 @@
 							<icon
 								class="inline-block h-3 -translate-x-1.5 translate-y-px"
 								data-icon="icon/chevron-right"
+								aria-hidden="true"
 							/>
 						</span>
 					</a>
@@ -72,7 +73,7 @@
 
 		<div class="flex-1 mx-auto border border-base-5 rounded-lg w-full max-w-md p-8 bg-base-2 mb-16">
 			<div class="flex flex-row items-center space-x-2 mb-6 ml-2">
-				<icon class="w-6" data-icon="icon/briefcase" />
+				<icon class="w-6" data-icon="icon/briefcase" aria-hidden="true" />
 				<span class="font-semibold text-sm">Work Experience</span>
 			</div>
 
@@ -107,6 +108,7 @@
 				<icon
 					class="inline-block w-4 h-4 ml-1 -rotate-45 translate-y-px"
 					data-icon="icon/paper-airplane"
+					aria-hidden="true"
 				/>
 			</a>
 		</div>

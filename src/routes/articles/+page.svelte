@@ -8,7 +8,11 @@
 </svelte:head>
 
 <a class="block text-xl mb-8" href="/">
-	<icon class="inline-block h-4 w-4 translate-y-0.5" data-icon="icon/chevron-left" />
+	<icon
+		class="inline-block h-4 w-4 translate-y-0.5"
+		data-icon="icon/chevron-left"
+		aria-hidden="true"
+	/>
 	Go back
 </a>
 
@@ -31,6 +35,7 @@
 					<icon
 						class="inline-block h-3 -translate-x-1.5 translate-y-px"
 						data-icon="icon/chevron-right"
+						aria-hidden="true"
 					/>
 				</span>
 			</a>
