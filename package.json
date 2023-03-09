@@ -25,6 +25,7 @@
     },
     "type": "module",
     "dependencies": {
-        "@radix-ui/colors": "^0.1.8"
+        "@radix-ui/colors": "^0.1.8",
+        "swetrix": "^2.1.0"
     }
 }

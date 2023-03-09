@@ -1,6 +1,21 @@
 <script>
 	import CSSIntermediate from '$lib/CSSIntermediate.svelte';
 	import Footer from '$lib/layout/Footer.svelte';
+
+	import { onMount } from 'svelte';
+	import { browser } from '$app/env';
+	import { page } from '$app/stores';
+	import * as Swetrix from 'swetrix';
+
+	onMount(() => {
+		Swetrix.init('nfebI15q8Nfk');
+		Swetrix.trackViews();
+	});
+
+	// Trigger a pageview everytime the user navigates.
+	// We use the `browser` env variable to ensure that we don't try to
+	// call trackViews while the component is doing SSR.
+	$: $page.url.pathname, browser && Swetrix.trackViews();
 </script>
 
 <CSSIntermediate>
