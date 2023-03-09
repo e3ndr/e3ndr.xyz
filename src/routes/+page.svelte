@@ -64,8 +64,10 @@
 
 			<a
 				class="block text-center text-sm p-3 rounded-lg transition border border-transparent hover:bg-base-3 hover:border-base-4"
-				href="/articles">See all articles</a
+				href="/articles"
 			>
+				See all articles
+			</a>
 		</ul>
 
 		<div class="flex-1 mx-auto border border-base-5 rounded-lg w-full max-w-md p-8 bg-base-2 mb-16">

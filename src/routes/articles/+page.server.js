@@ -8,16 +8,20 @@ export async function load({ url }) {
 	try {
 		let after = 0;
 
-		const requestedAfter = Number.parseInt(url.searchParams.after);
+		const requestedAfter = Number.parseInt(url.searchParams.get('after'));
 		if (requestedAfter > 0 && requestedAfter != NaN && requestedAfter < BLOG_POSTS.length) {
 			after = requestedAfter;
 		}
 
 		const isEnd = after + SHOW > BLOG_POSTS.length;
+		const isStart = after == 0;
 
 		return {
-			recentBlogPosts: BLOG_POSTS.slice(after, SHOW),
-			isEnd: isEnd
+			blogPosts: BLOG_POSTS.slice(after, after + SHOW),
+			next: after + SHOW,
+			previous: after - SHOW,
+			isEnd: isEnd,
+			isStart: isStart
 		};
 	} catch (e) {
 		throw error(500, e);
