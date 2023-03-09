@@ -3,7 +3,7 @@
 	import Footer from '$lib/layout/Footer.svelte';
 
 	import { onMount } from 'svelte';
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
 	import * as Swetrix from 'swetrix';
 
