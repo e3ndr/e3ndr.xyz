@@ -6,12 +6,12 @@
 
 @font-face {
 	font-family: 'Cormorant';
-	src: url('fonts/Cormorant.ttf');
+	src: url('/fonts/Cormorant.ttf');
 }
 
 @font-face {
 	font-family: 'Open Sans';
-	src: url('fonts/OpenSans.ttf');
+	src: url('/fonts/OpenSans.ttf');
 }
 
 /* Tailwind */
