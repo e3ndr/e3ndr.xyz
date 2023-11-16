@@ -6,7 +6,7 @@ import BLOG_POSTS from '$lib/meta/blogPosts.mjs';
 export async function load() {
 	try {
 		return {
-			recentBlogPosts: BLOG_POSTS.slice(0, 3) // Grab the first 3 entries.
+			recentBlogPosts: BLOG_POSTS.reverse().slice(0, 3) // Grab the first 3 entries.
 		};
 	} catch (e) {
 		throw error(500, e);
