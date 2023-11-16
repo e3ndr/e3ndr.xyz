@@ -17,7 +17,7 @@ export async function load({ url }) {
 		const isStart = after == 0;
 
 		return {
-			blogPosts: BLOG_POSTS.slice(after, after + SHOW),
+			blogPosts: BLOG_POSTS.reverse().slice(after, after + SHOW),
 			next: after + SHOW,
 			previous: after - SHOW,
 			isEnd: isEnd,
