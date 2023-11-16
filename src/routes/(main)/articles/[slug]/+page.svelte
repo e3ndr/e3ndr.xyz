@@ -6,7 +6,7 @@
 	let contentComponent;
 
 	onMount(async () => {
-		contentComponent = (await import(`../../../lib/meta/articles/${data.slug}.svelte`)).default;
+		contentComponent = (await import(`../../../../lib/meta/articles/${data.slug}.svelte`)).default;
 	});
 </script>
 
