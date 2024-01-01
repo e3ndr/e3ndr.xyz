@@ -17,6 +17,7 @@
 	$: weather,
 		(() => {
 			if (typeof window == 'undefined') return;
+			if (!document.querySelector('main')) return;
 			switch (weather) {
 				case 'SHOWERS': {
 					snowShader.run = false;
