@@ -9,8 +9,7 @@
 	let renderTaskId = -1;
 
 	let startTime;
-	let elapsedSeconds = 0;
-	let elapsedSubSeconds = 0;
+	let elapsed = 0;
 
 	let currentFrame = 0;
 	let isBip = false;
@@ -24,13 +23,6 @@
 			query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
 		}
 		return query;
-	}
-
-	function formatTime(millis) {
-		const subseconds = Math.floor(((millis % 1000) / 1000) * FRAMERATE);
-		const seconds = Math.floor(millis / 1000);
-
-		return [seconds, subseconds];
 	}
 
 	function doBeep(frequency) {
@@ -47,9 +39,7 @@
 	function render() {
 		currentFrame++;
 
-		const elapsedTime = formatTime(new Date() - startTime);
-		elapsedSeconds = elapsedTime[0];
-		elapsedSubSeconds = elapsedTime[1];
+		elapsed = (Date.now() - startTime) / 1000;
 
 		const doNoise = currentFrame % FRAMERATE == 0;
 		if (doNoise) {
@@ -94,11 +84,7 @@
 
 <div>
 	<div id="time-elapsed">
-		<span>
-			{elapsedSeconds};{elapsedSubSeconds
-				.toString()
-				.padStart(FRAMERATE?.toString().length, '0')}</span
-		>
+		<span> {elapsed.toFixed(3)}</span>
 	</div>
 
 	<div id="color-test">
