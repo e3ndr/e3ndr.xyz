@@ -8,8 +8,8 @@ export default [
 	{
 		id: 'tvg',
 		name: 'The VanderBloemen Group',
-		timeframe: ['Dec 2022', 'Present'],
-		role: 'Web Developer & SEO Specialist'
+		timeframe: ['Dec 2022', 'Jul 2023'],
+		role: 'Website Developer & SEO Specialist'
 	},
 	// {
 	// 	id: 'brime',
