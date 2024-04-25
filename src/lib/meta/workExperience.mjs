@@ -2,12 +2,14 @@ export default [
 	{
 		id: 'casterlabs',
 		name: 'Casterlabs',
+		link: "https://casterlabs.co?ref=e3ndr.xyz",
 		timeframe: ['2020', 'Present'],
 		role: 'Founder'
 	},
 	{
 		id: 'tvg',
 		name: 'The VanderBloemen Group',
+		link: "https://vanderbloemengroup.com?ref=e3ndr.xyz",
 		timeframe: ['Dec 2022', 'Jul 2023'],
 		role: 'Website Developer & SEO Specialist'
 	},

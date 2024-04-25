@@ -90,7 +90,11 @@
 			</div>
 
 			{#each WORK_EXPERIENCE as experience}
-				<div class="flex flex-row items-center space-x-3 mt-2 w-full">
+				<a
+					class="flex flex-row items-center space-x-3 mt-2 w-full"
+					href={experience.link}
+					target="_blank"
+				>
 					<div class="border border-base-6 bg-base-1 rounded-full w-10 h-10 shadow-sm">
 						<img
 							class="p-1 rounded-full w-full h-full shadow-md"
@@ -103,11 +107,12 @@
 						<div class="flex flex-row text-base-9 text-xs">
 							<span class="flex-1">{experience.role}</span>
 							<span>
-								{experience.timeframe[0]}&mdash;{experience.timeframe[1]}
+								{experience.timeframe[0]}{#if experience.timeframe.length > 1}&mdash;{experience
+										.timeframe[1]}{/if}
 							</span>
 						</div>
 					</div>
-				</div>
+				</a>
 			{/each}
 
 			<a
