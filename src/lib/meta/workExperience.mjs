@@ -11,10 +11,11 @@ export default [
 		timeframe: ['Dec 2022', 'Present'],
 		role: 'Web Developer & SEO Specialist'
 	},
-	{
-		id: 'brime',
-		name: 'Brime',
-		timeframe: ['Jul 2022', 'Sep 2022'],
-		role: 'Frontend Designer / Engineer'
-	}
+	// {
+	// 	id: 'brime',
+	// 	name: 'Brime',
+	// 	link: 'https://brime.tv?ref=e3ndr.xyz',
+	// 	timeframe: ['Jul 2022', 'Sep 2022'],
+	// 	role: 'Frontend Designer / Engineer'
+	// },
 ];
