@@ -20,4 +20,11 @@ export default [
 	// 	timeframe: ['Jul 2022', 'Sep 2022'],
 	// 	role: 'Frontend Designer / Engineer'
 	// },
+	{
+		id: 'cre8tor',
+		name: 'CRE8TOR',
+		link: "https://cre8tor.gg?ref=e3ndr.xyz",
+		timeframe: ['April 2024'],
+		role: 'Website Developer'
+	}
 ];
