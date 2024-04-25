@@ -26,7 +26,7 @@
 
 	<h1 class="mt-4 font-serif font-bold text-6xl">Software engineer & UX Expert.</h1>
 	<p class="mt-3 text-lg max-w-2xl">
-		I'm Alex, a 19 y/o software engineer currently residing in Oklahoma. I'm also one of the
+		I'm Alex, a 20 y/o software engineer currently residing in Oklahoma. I'm also one of the
 		founders of Casterlabs, a toolsuite for live-streamers and content creators.
 	</p>
 
