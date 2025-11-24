@@ -67,7 +67,7 @@
 		}
 
 		if (transparent == 'true') {
-			document.body.style.backgroundColor = 'transparent !important';
+			document.body.style.backgroundColor = 'transparent';
 		}
 
 		FRAMERATE = rate;
