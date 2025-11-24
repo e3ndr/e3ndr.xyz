@@ -61,9 +61,13 @@
 	}
 
 	onMount(() => {
-		const { rate, sound } = parseQuery();
+		const { rate, sound, transparent } = parseQuery();
 		if (!rate || !sound) {
 			location.search = `?rate=${rate || 60}&sound=${sound || false}`;
+		}
+
+		if (transparent == 'true') {
+			document.body.style.backgroundColor = 'transparent !important';
 		}
 
 		FRAMERATE = rate;
