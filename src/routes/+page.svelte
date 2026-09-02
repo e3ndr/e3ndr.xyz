@@ -24,7 +24,6 @@
 				>
 			</h3>
 			founded by me in 2020, casterlabs has grown into a platform i continue to maintain and improve.
-			i'm still actively building and iterating on it today.
 		</section>
 
 		<section>
@@ -47,8 +46,7 @@
 					class="text-gray-12 hover:text-gray-11">Meld Studio</a
 				>
 			</h3>
-			joined in 2025 to work on platform integrations and connect UI components to the backend. i'm still
-			involved in the development process.
+			joined in 2025 to work on platform integrations and connect UI components to the backend.
 		</section>
 
 		<section>
