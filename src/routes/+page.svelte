@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>alex bowles // e3ndr // ItzLcyx</title>
+</svelte:head>
+
 <div class="space-y-12 text-gray-11">
 	<section class="space-y-4">
 		<h1 class="text-4xl text-gray-12">alex bowles // e3ndr // ItzLcyx</h1>
