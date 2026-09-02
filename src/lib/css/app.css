@@ -1,0 +1,99 @@
+@font-face {
+	font-family: 'Geist';
+	src: url('/fonts/geist/Geist-VariableFont_wght.ttf');
+	font-optical-sizing: auto;
+}
+
+html {
+	font-optical-sizing: auto;
+}
+
+html,
+body {
+	overscroll-behavior: none;
+	height: 100%;
+}
+
+* {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-drag: none;
+}
+
+::selection {
+	background-color: var(--color-gray-12);
+	color: var(--color-gray-1);
+}
+
+/* ---------------- */
+/* break-anywhere   */
+/* ---------------- */
+
+@supports not (overflow-wrap: anywhere) {
+	.break-anywhere {
+		word-break: break-word;
+	}
+}
+
+@supports (overflow-wrap: anywhere) {
+	.break-anywhere {
+		overflow-wrap: anywhere;
+	}
+}
+
+@supports not (overflow-wrap: anywhere) {
+	.break-anywhere {
+		word-break: break-word;
+	}
+}
+
+@supports (overflow-wrap: anywhere) {
+	.break-anywhere {
+		overflow-wrap: anywhere;
+	}
+}
+
+/* ---------------- */
+/* scroll bar       */
+/* ---------------- */
+
+@supports not selector(::-webkit-scrollbar) {
+	* {
+		scrollbar-color: var(--radix-intermediate-sage-11) transparent;
+		scrollbar-width: thin;
+	}
+}
+
+*::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+}
+
+*::-webkit-scrollbar-track {
+	background: transparent;
+	border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: var(--radix-intermediate-sage-11);
+	border-radius: 10px;
+}
+
+/* ---------------- */
+/* links            */
+/* ---------------- */
+
+a[target='_blank'] {
+	text-decoration: underline;
+}
+
+a[target='_blank']::after {
+	content: '';
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin-left: 4px;
+	background-color: currentColor;
+
+	mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'%3E%3C/path%3E%3Cpolyline points='15 3 21 3 21 9'%3E%3C/polyline%3E%3Cline x1='10' y1='14' x2='21' y2='3'%3E%3C/line%3E%3C/svg%3E");
+	mask-size: contain;
+}
