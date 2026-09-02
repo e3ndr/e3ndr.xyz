@@ -66,6 +66,7 @@
 
 		if (transparent == 'true') {
 			document.body.style.backgroundColor = 'transparent';
+			document.documentElement.style.backgroundColor = 'transparent';
 		}
 
 		FRAMERATE = parseFloat(rate);
@@ -157,7 +158,7 @@
 
 	:global(body),
 	:global(html) {
-		background-color: transparent !important;
+		background-color: black !important;
 	}
 
 	#time-elapsed {
