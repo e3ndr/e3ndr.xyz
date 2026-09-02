@@ -155,8 +155,9 @@
 		--square-size: 6vw;
 	}
 
-	:global(body) {
-		background-color: black;
+	:global(body),
+	:global(html) {
+		background-color: transparent !important;
 	}
 
 	#time-elapsed {
