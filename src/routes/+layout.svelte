@@ -7,7 +7,7 @@
 
 	const NAV_LINKS = [
 		{ name: 'about', href: '/' },
-		{ name: 'blog', href: '/blog' },
+		// { name: 'blog', href: '/blog' },
 		{ name: 'twitter', href: 'https://twitter.com/itzlcyx' },
 		{ name: 'github', href: 'https://github.com/e3ndr' },
 		{ name: 'linkedin', href: 'https://www.linkedin.com/in/e3ndr' }
