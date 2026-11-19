@@ -1,8 +1,11 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
 
+	const ELAPSED_ROLLOVER = 1000000000;
+
 	let FRAMERATE: number = $state(60);
 	let PLAYSOUND: boolean = $state(false);
+	let ZULU_TIME: boolean = $state(false);
 
 	let audioContext: AudioContext;
 
@@ -10,6 +13,7 @@
 
 	let startTime: number;
 	let elapsed = $state(0);
+	let zuluTime = $state(['', '']);
 
 	let currentFrame = $state(0);
 	let isBip = $state(false);
@@ -41,6 +45,8 @@
 
 		elapsed = (Date.now() - startTime) / 1000;
 
+		zuluTime = new Date().toISOString().split('T');
+
 		const doNoise = currentFrame % FRAMERATE == 0;
 		if (doNoise) {
 			isBip = !isBip;
@@ -59,18 +65,22 @@
 	}
 
 	onMount(() => {
-		const { rate, sound, transparent } = parseQuery();
-		if (!rate || !sound) {
-			location.search = `?rate=${rate || 60}&sound=${sound || false}`;
+		const { rate, sound, transparent, zuluTime } = parseQuery();
+		if (!rate || !sound || !transparent || !zuluTime) {
+			location.search = `?rate=${rate || 60}&sound=${sound || false}&transparent=${transparent || false}&zuluTime=${zuluTime || false}`;
 		}
 
 		if (transparent == 'true') {
-			document.body.style.backgroundColor = 'transparent';
-			document.documentElement.style.backgroundColor = 'transparent';
+			document.body.style.backgroundColor = 'transparent !important';
+			document.documentElement.style.backgroundColor = 'transparent !important';
+		} else {
+			document.body.style.backgroundColor = 'black !important';
+			document.documentElement.style.backgroundColor = 'black !important';
 		}
 
 		FRAMERATE = parseFloat(rate);
 		PLAYSOUND = sound == 'true';
+		ZULU_TIME = zuluTime == 'true';
 
 		audioContext = new AudioContext();
 		startTime = Date.now();
@@ -90,7 +100,12 @@
 <!-- svelte-ignore element_invalid_self_closing_tag -->
 <div>
 	<div id="time-elapsed" class="font-mono">
-		<span> {elapsed.toFixed(3)}</span>
+		{#if ZULU_TIME}
+			<span> {zuluTime[0]}T </span>
+			<span> {zuluTime[1]} </span>
+		{:else}
+			<span> {(elapsed % ELAPSED_ROLLOVER).toFixed(3)} </span>
+		{/if}
 	</div>
 
 	<div id="color-test">
@@ -156,21 +171,16 @@
 		--square-size: 6vw;
 	}
 
-	:global(body),
-	:global(html) {
-		background-color: black !important;
-	}
-
 	#time-elapsed {
 		position: absolute;
 		top: 25vh;
-		right: 55vw;
+		right: 60vw;
 		transform: translateY(-50%);
-		width: 30vw;
+		width: calc(var(--square-size) * 4);
 		overflow: hidden;
 		color: white;
-		text-align: center;
-		font-size: 8rem;
+		text-align: right;
+		font-size: 3.33vw;
 	}
 
 	#color-test {
@@ -258,6 +268,6 @@
 		left: 0;
 		right: 0;
 		text-align: center;
-		font-size: 6rem;
+		font-size: 5vw;
 	}
 </style>
